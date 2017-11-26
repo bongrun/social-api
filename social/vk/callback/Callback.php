@@ -1,15 +1,21 @@
 <?php
 
 namespace bongrun\social\vk\callback;
-use bongrun\social\vk\object\AudioObject;
-use bongrun\social\vk\object\MessageObject;
-use bongrun\social\vk\object\PhotoObject;
-use bongrun\social\vk\object\VideoObject;
-use bongrun\social\vk\object\WallObject;
-use bongrun\social\vk\object\WallReplyObject;
+
+use bongrun\social\vk\object\{
+    AudioObject,
+    MessageObject,
+    PhotoObject,
+    VideoObject,
+    WallObject,
+    WallReplyObject,
+};
 
 /**
- * Class MessageNewCallback
+ * Получение нового оповещения из группы
+ *
+ * Class Callback
+ * @package bongrun\social\vk\callback
  */
 class Callback extends AbstractCallback
 {
