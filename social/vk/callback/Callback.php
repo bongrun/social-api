@@ -1,7 +1,12 @@
 <?php
 
 namespace bongrun\social\vk\callback;
-use bongrun\social\vk\object\Message;
+use bongrun\social\vk\object\AudioObject;
+use bongrun\social\vk\object\MessageObject;
+use bongrun\social\vk\object\PhotoObject;
+use bongrun\social\vk\object\VideoObject;
+use bongrun\social\vk\object\WallObject;
+use bongrun\social\vk\object\WallReplyObject;
 
 /**
  * Class MessageNewCallback
@@ -18,7 +23,7 @@ class Callback extends AbstractCallback
     const TYPE_PHOTO_COMMENT_EDIT = 'photo_comment_edit';
     const TYPE_PHOTO_COMMENT_RESTORE = 'photo_comment_restore';
     const TYPE_PHOTO_COMMENT_DELETE = 'photo_comment_delete';
-    const YPE_AUDIO_NEW = 'audio_new';
+    const TYPE_AUDIO_NEW = 'audio_new';
     const TYPE_VIDEO_NEW = 'video_new';
     const TYPE_VIDEO_COMMENT_NEW = 'video_comment_new';
     const TYPE_VIDEO_COMMENT_EDIT = 'video_comment_edit';
@@ -61,8 +66,30 @@ class Callback extends AbstractCallback
                 break;
             case static::TYPE_MESSAGE_NEW:
             case static::TYPE_MESSAGE_REPLY:
-                $this->object = new Message($this->object);
+                $this->object = new MessageObject($this->object);
                 break;
+            case static::TYPE_PHOTO_NEW:
+                $this->object = new PhotoObject($this->object);
+                break;
+            case static::TYPE_AUDIO_NEW:
+                $this->object = new AudioObject($this->object);
+                break;
+            case static::TYPE_VIDEO_NEW:
+                $this->object = new VideoObject($this->object);
+                break;
+            case static::TYPE_WALL_POST_NEW:
+            case static::TYPE_WALL_REPOST:
+                $this->object = new WallObject($this->object);
+                break;
+            case static::TYPE_WALL_REPLY_NEW:
+            case static::TYPE_WALL_REPLY_EDIT:
+            case static::TYPE_WALL_REPLY_RESTORE:
+            case static::TYPE_MARKET_COMMENT_NEW:
+            case static::TYPE_MARKET_COMMENT_EDIT:
+            case static::TYPE_MARKET_COMMENT_RESTORE:
+                $this->object = new WallReplyObject($this->object);
+                break;
+            //todo
         }
     }
 }

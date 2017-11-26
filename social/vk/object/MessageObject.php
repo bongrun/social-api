@@ -8,19 +8,13 @@ namespace bongrun\social\vk\object;
  * Class Message
  * @package bongrun\social\vk\object
  */
-class Message
+class MessageObject extends AbstractObject
 {
     const READ_STATE_UNREAD = 0;
     const READ_STATE_READ = 1;
+
     const OUT_RECEIVED = 0;
     const OUT_SEND = 1;
-
-    protected $data;
-
-    public function __construct($data = [])
-    {
-        $this->data = $data;
-    }
 
     /**
      * идентификатор сообщения (не возвращается для пересланных сообщений).
@@ -145,17 +139,17 @@ class Message
     /**
      * информация о местоположении
      *
-     * @return Geo|null
+     * @return GeoObject|null
      */
     public function getGeo()
     {
-        return $this->data['geo'] ? new Geo($this->data['geo']) : null;
+        return $this->data['geo'] ? new GeoObject($this->data['geo']) : null;
     }
 
     /**
      * медиавложения сообщения (фотографии, ссылки и т.п.)
      *
-     * @return Attachment[]|null
+     * @return AttachmentObject[]|null
      */
     public function getAttachments()
     {
@@ -164,7 +158,7 @@ class Message
         }
         $attachments = [];
         foreach ($this->data['attachments'] as $attachment) {
-            $attachments[] = new Attachment($attachment);
+            $attachments[] = new AttachmentObject($attachment);
         }
         return $attachments;
     }

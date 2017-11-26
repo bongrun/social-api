@@ -8,13 +8,7 @@ namespace bongrun\social\vk\object;
  * Class Geo
  * @package bongrun\social\vk\object
  */
-class Geo
+class GeoObject extends AbstractObject
 {
-    protected $data;
 
-    public function __construct($data = [])
-    {
-        $this->data = $data;
-        //todo
-    }
 }
