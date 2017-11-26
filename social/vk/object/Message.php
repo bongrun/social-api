@@ -2,6 +2,12 @@
 
 namespace bongrun\social\vk\object;
 
+/**
+ * Объект, описывающий личное сообщение
+ *
+ * Class Message
+ * @package bongrun\social\vk\object
+ */
 class Message
 {
     const READ_STATE_UNREAD = 0;
