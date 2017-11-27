@@ -12,6 +12,7 @@ abstract class AbstractCallback
     public function __construct(array $data)
     {
         $this->data = $data;
+        $this->init();
     }
 
     abstract protected function init();

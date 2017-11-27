@@ -14,4 +14,15 @@ class AbstractObject
     {
         $this->data = $data;
     }
+
+    /**
+     * Обращение к свойствам для которых не созданны методы
+     *
+     * @param $name
+     * @return mixed
+     */
+    public function get($name)
+    {
+        return $this->data[$name] ?? null;
+    }
 }

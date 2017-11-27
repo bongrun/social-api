@@ -93,6 +93,12 @@ class Callback extends AbstractCallback
             case static::TYPE_MARKET_COMMENT_NEW:
             case static::TYPE_MARKET_COMMENT_EDIT:
             case static::TYPE_MARKET_COMMENT_RESTORE:
+            case static::TYPE_PHOTO_COMMENT_NEW:
+            case static::TYPE_PHOTO_COMMENT_EDIT:
+            case static::TYPE_PHOTO_COMMENT_RESTORE:
+            case static::TYPE_VIDEO_COMMENT_NEW:
+            case static::TYPE_VIDEO_COMMENT_EDIT:
+            case static::TYPE_VIDEO_COMMENT_RESTORE:
                 $this->object = new WallReplyObject($this->object);
                 break;
             //todo
