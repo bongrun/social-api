@@ -1,12 +1,12 @@
 <?php
 
-namespace bongrun\social\vk\object;
+namespace bongrun\social\telegram\object;
 
 use bongrun\social\base\object\ObjectInterface;
 
 /**
  * Class AbstractObject
- * @package bongrun\social\vk\object
+ * @package bongrun\social\telegram\object
  */
 class AbstractObject implements ObjectInterface
 {
