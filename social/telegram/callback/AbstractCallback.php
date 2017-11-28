@@ -33,7 +33,7 @@ abstract class AbstractCallback extends BaseAbstractCallback
         $this->lastErrorDate = $this->data['last_error_date'] ?? null;
         $this->lastErrorMessage = $this->data['last_error_message'] ?? null;
         $this->maxConnections = $this->data['max_connections'] ?? null;
-        $this->allowedUpdates = $this->data['allowed_updates'] ?? null;
+        $this->allowedUpdates = $this->data['allowed_updates'] ?? [];
     }
 
     public function getOffset()

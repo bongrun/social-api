@@ -2,7 +2,7 @@
 
 namespace bongrun\social\base\callback;
 
-use bongrun\social\base\object\ObjectInterface;
+use bongrun\social\base\object\BaseObjectInterface;
 
 /**
  * Class AbstractCallback
@@ -20,7 +20,7 @@ abstract class AbstractCallback
     abstract protected function init();
 
     /**
-     * @return ObjectInterface[]
+     * @return BaseObjectInterface[]
      */
     abstract protected function getUpdates(): array;
 }

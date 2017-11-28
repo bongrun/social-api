@@ -2,7 +2,6 @@
 
 namespace bongrun\social\telegram\object;
 
-use bongrun\social\base\object\ObjectInterface;
 use bongrun\social\base\object\UpdateInterface;
 
 /**
@@ -53,7 +52,7 @@ class UpdateObject extends AbstractObject implements UpdateInterface
     }
 
     /**
-     * @return ObjectInterface|null
+     * @return TelegramObjectInterface|null
      */
     public function getObject()
     {

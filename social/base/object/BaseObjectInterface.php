@@ -2,7 +2,7 @@
 
 namespace bongrun\social\base\object;
 
-interface ObjectInterface
+interface BaseObjectInterface
 {
     public function get($name);
 }

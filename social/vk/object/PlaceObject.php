@@ -8,7 +8,7 @@ namespace bongrun\social\vk\object;
  * Class PlaceObject
  * @package bongrun\social\vk\object
  */
-class PlaceObject extends AbstractObject
+class PlaceObject extends VkAbstractObject
 {
     /**
      * идентификатор места (если назначено)

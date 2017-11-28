@@ -6,7 +6,7 @@ namespace bongrun\social\vk\object;
  * Class StikerObject
  * @package bongrun\social\vk\object
  */
-class StikerObject extends AbstractObject implements AttachmentObjectItemInterface
+class StikerObject extends VkAbstractObject implements AttachmentObjectItemInterface
 {
 
 }

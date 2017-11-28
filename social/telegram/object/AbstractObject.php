@@ -2,29 +2,12 @@
 
 namespace bongrun\social\telegram\object;
 
-use bongrun\social\base\object\ObjectInterface;
+use bongrun\social\base\object\BaseAbstractObject;
 
 /**
  * Class AbstractObject
  * @package bongrun\social\telegram\object
  */
-class AbstractObject implements ObjectInterface
+class AbstractObject extends BaseAbstractObject implements TelegramObjectInterface
 {
-    protected $data;
-
-    public function __construct($data)
-    {
-        $this->data = $data;
-    }
-
-    /**
-     * Обращение к свойствам для которых не созданны методы
-     *
-     * @param $name
-     * @return mixed
-     */
-    public function get($name)
-    {
-        return $this->data[$name] ?? null;
-    }
 }

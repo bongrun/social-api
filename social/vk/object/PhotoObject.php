@@ -9,7 +9,7 @@ namespace bongrun\social\vk\object;
  * @package bongrun\social\vk\object
  * @see https://vk.com/dev/objects/photo
  */
-class PhotoObject extends AbstractObject implements AttachmentObjectItemInterface
+class PhotoObject extends VkAbstractObject implements AttachmentObjectItemInterface
 {
     const USER_GROUP = 100;
 

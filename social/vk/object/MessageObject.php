@@ -8,7 +8,7 @@ namespace bongrun\social\vk\object;
  * Class Message
  * @package bongrun\social\vk\object
  */
-class MessageObject extends AbstractObject
+class MessageObject extends VkAbstractObject
 {
     const READ_STATE_UNREAD = 0;
     const READ_STATE_READ = 1;

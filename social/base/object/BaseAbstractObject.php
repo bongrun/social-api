@@ -1,14 +1,12 @@
 <?php
 
-namespace bongrun\social\vk\object;
-
-use bongrun\social\base\object\ObjectInterface;
+namespace bongrun\social\base\object;
 
 /**
  * Class AbstractObject
- * @package bongrun\social\vk\object
+ * @package bongrun\social\base\object
  */
-class AbstractObject implements ObjectInterface
+class BaseAbstractObject implements BaseObjectInterface
 {
     protected $data;
 

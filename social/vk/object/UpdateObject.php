@@ -2,7 +2,6 @@
 
 namespace bongrun\social\vk\object;
 
-use bongrun\social\base\object\ObjectInterface;
 use bongrun\social\base\object\UpdateInterface;
 
 /**
@@ -11,7 +10,7 @@ use bongrun\social\base\object\UpdateInterface;
  * Class Attachment
  * @package bongrun\social\vk\object
  */
-class UpdateObject extends AbstractObject implements UpdateInterface
+class UpdateObject extends VkAbstractObject implements UpdateInterface
 {
     const TYPE_CONFIRM = 'confirm';
     const TYPE_MESSAGE_NEW = 'message_new';
@@ -66,7 +65,7 @@ class UpdateObject extends AbstractObject implements UpdateInterface
     }
 
     /**
-     * @return ObjectInterface|null
+     * @return VkBaseObjectInterface|null
      */
     public function getObject()
     {

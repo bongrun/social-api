@@ -9,7 +9,7 @@ namespace bongrun\social\vk\object;
  * @package bongrun\social\vk\object
  * @see https://vk.com/dev/objects/photo_sizes
  */
-class PhotoSizeObject extends AbstractObject
+class PhotoSizeObject extends VkAbstractObject
 {
     /** пропорциональная копия изображения с максимальной стороной 75px; */
     const TYPE_PHOTO_S = 's';

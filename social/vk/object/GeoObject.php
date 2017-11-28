@@ -8,7 +8,7 @@ namespace bongrun\social\vk\object;
  * Class Geo
  * @package bongrun\social\vk\object
  */
-class GeoObject extends AbstractObject
+class GeoObject extends VkAbstractObject
 {
     /**
      * тип места

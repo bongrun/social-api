@@ -6,7 +6,7 @@ namespace bongrun\social\vk\object;
  * Class GiftObject
  * @package bongrun\social\vk\object
  */
-class GiftObject extends AbstractObject implements AttachmentObjectItemInterface
+class GiftObject extends VkAbstractObject implements AttachmentObjectItemInterface
 {
 
 }

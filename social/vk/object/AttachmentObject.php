@@ -8,7 +8,7 @@ namespace bongrun\social\vk\object;
  * Class Attachment
  * @package bongrun\social\vk\object
  */
-class AttachmentObject extends AbstractObject
+class AttachmentObject extends VkAbstractObject
 {
     const TYPE_PHOTO = 'photo';
     const TYPE_VIDEO = 'video';
