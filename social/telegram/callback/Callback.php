@@ -30,6 +30,9 @@ class Callback extends AbstractCallback
         }
     }
 
+    /**
+     * @return UpdateObject[]
+     */
     public function getUpdates(): array
     {
         return $this->updates;

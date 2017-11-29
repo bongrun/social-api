@@ -41,7 +41,10 @@ class UpdateObject extends AbstractObject implements UpdateInterface
         return $this->data['update_id'];
     }
 
-    public function getType()
+    /**
+     * @return string
+     */
+    public function getType(): string
     {
         foreach ($this->types as $type) {
             if (isset($this->data[$type])) {

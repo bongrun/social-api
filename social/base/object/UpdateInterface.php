@@ -2,9 +2,19 @@
 
 namespace bongrun\social\base\object;
 
+/**
+ * Interface UpdateInterface
+ * @package bongrun\social\base\object
+ */
 interface UpdateInterface
 {
-    public function getType();
+    /**
+     * @return string
+     */
+    public function getType(): string;
 
-    public function getObject();
+    /**
+     * @return BaseObjectInterface
+     */
+    public function getObject(): BaseObjectInterface;
 }

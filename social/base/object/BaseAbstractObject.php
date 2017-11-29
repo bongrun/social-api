@@ -3,14 +3,21 @@
 namespace bongrun\social\base\object;
 
 /**
- * Class AbstractObject
+ * Class BaseAbstractObject
  * @package bongrun\social\base\object
  */
 class BaseAbstractObject implements BaseObjectInterface
 {
+    /**
+     * @var array
+     */
     protected $data;
 
-    public function __construct($data)
+    /**
+     * BaseAbstractObject constructor.
+     * @param array $data
+     */
+    public function __construct(array $data)
     {
         $this->data = $data;
     }
@@ -19,7 +26,7 @@ class BaseAbstractObject implements BaseObjectInterface
      * Обращение к свойствам для которых не созданны методы
      *
      * @param $name
-     * @return mixed
+     * @return string|int|array|null
      */
     public function get($name)
     {
