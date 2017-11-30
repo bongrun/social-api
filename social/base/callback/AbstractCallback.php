@@ -8,7 +8,7 @@ use bongrun\social\base\object\BaseObjectInterface;
  * Class AbstractCallback
  * @package bongrun\social\base\callback
  */
-abstract class AbstractCallback
+abstract class AbstractCallback implements InterfaceCallback
 {
     /**
      * @var array
@@ -30,5 +30,5 @@ abstract class AbstractCallback
     /**
      * @return BaseObjectInterface[]
      */
-    abstract protected function getUpdates(): array;
+    abstract public function getUpdates(): array;
 }
