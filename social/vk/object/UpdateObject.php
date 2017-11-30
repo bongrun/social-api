@@ -2,6 +2,7 @@
 
 namespace bongrun\social\vk\object;
 
+use bongrun\social\base\object\BaseObjectInterface;
 use bongrun\social\base\object\UpdateInterface;
 
 /**
@@ -51,7 +52,7 @@ class UpdateObject extends VkAbstractObject implements UpdateInterface
     const TYPE_GROUP_CHANGE_SETTINGS = 'group_change_settings';
     const TYPE_GROUP_CHANGE_PHOTO = 'group_change_photo';
 
-    public function getType()
+    public function getType():string
     {
         return $this->data['type'] ?? null;
     }
@@ -65,9 +66,9 @@ class UpdateObject extends VkAbstractObject implements UpdateInterface
     }
 
     /**
-     * @return VkBaseObjectInterface|null
+     * @return VkBaseObjectInterface|BaseObjectInterface|null
      */
-    public function getObject()
+    public function getObject():BaseObjectInterface
     {
         $object = $this->data['object'] ?? null;
         if (!$object) {

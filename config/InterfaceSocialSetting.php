@@ -2,7 +2,7 @@
 
 namespace bongrun\config;
 
-use bongrun\social\base\callback\InterfaceCallback;
+use bongrun\social\base\checker\InterfaceChecker;
 
 /**
  * Interface InterfaceSocialSetting
@@ -13,9 +13,15 @@ interface InterfaceSocialSetting
     const TYPE_VK = 'vk';
     const TYPE_TELEGRAM = 'telegram';
 
+    public function getId();
+
     public function getType(): string;
 
     public function getKey(): string;
 
-    public function getCallbackClass(): InterfaceCallback;
+    public function getCallbackClass(): string;
+
+    public function isRequest(): bool;
+
+    public function getChecker(): InterfaceChecker;
 }
