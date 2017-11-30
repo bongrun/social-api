@@ -1,6 +1,7 @@
 {
   "require": {
     "league/event": "^2.1",
-    "bongrun/queue-adapter": "1.0.4"
+    "bongrun/queue-adapter": "1.0.4",
+    "bongrun/curl-adapter": "1.0.3"
   }
 }

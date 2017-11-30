@@ -3,6 +3,7 @@
 namespace bongrun\config;
 
 use bongrun\social\base\checker\InterfaceChecker;
+use bongrun\social\base\request\SendRequestInterface;
 
 /**
  * Interface InterfaceSocialSetting
@@ -22,7 +23,12 @@ interface InterfaceSocialSetting
     public function getCallbackClass(): string;
 
     public function isRequest(): bool;
+
     public function isSendRequestUpdate(): bool;
 
     public function getChecker(): InterfaceChecker;
+
+    public function getSendRequest(): SendRequestInterface;
+
+    public function getTimeoutMilliseconds(): int;
 }
