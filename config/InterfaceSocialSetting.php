@@ -22,6 +22,7 @@ interface InterfaceSocialSetting
     public function getCallbackClass(): string;
 
     public function isRequest(): bool;
+    public function isSendResponseUpdate(): bool;
 
     public function getChecker(): InterfaceChecker;
 }

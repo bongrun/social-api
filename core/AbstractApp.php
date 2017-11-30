@@ -79,5 +79,34 @@ abstract class AbstractApp
         }
     }
 
+    public function sendResponseUpdate()
+    {
+        foreach ($this->socialsSettings as $socialSetting) {
+            if (!is_a($socialSetting, InterfaceSocialSetting::class)) {
+                throw new \Exception('У $socialSetting не верный интерфейс');
+            }
+            if (!$socialSetting->isSendResponseUpdate()) {
+                continue;
+            }
+            //todo реализовать отправку запроса
+            if (!$socialSetting->getChecker()->isRequest($data)) {
+                continue;
+            }
+            /** @var InterfaceCallback $callback */
+            $callback = new ($socialSetting->getCallbackClass())($data);
+            if (!is_a($callback, InterfaceCallback::class)) {
+                throw new \Exception('У $callback не верный интерфейс');
+            }
+            foreach ($callback->getUpdates() as $update) {
+                if (!is_subclass_of($this->updateEventClass, UpdateEventInterface::class)) {
+                    throw new \Exception('У $updateEvent не верный интерфейс');
+                }
+                /** @var UpdateEventInterface $updateEvent */
+                $updateEvent = new ($this->updateEventClass)($socialSetting, $update);
+                $this->emitter->emit($updateEvent);
+            }
+        }
+    }
+
     abstract public function listener();
 }
