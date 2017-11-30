@@ -79,13 +79,13 @@ abstract class AbstractApp
         }
     }
 
-    public function sendResponseUpdate()
+    public function sendRequestUpdate()
     {
         foreach ($this->socialsSettings as $socialSetting) {
             if (!is_a($socialSetting, InterfaceSocialSetting::class)) {
                 throw new \Exception('У $socialSetting не верный интерфейс');
             }
-            if (!$socialSetting->isSendResponseUpdate()) {
+            if (!$socialSetting->isSendRequestUpdate()) {
                 continue;
             }
             //todo реализовать отправку запроса
